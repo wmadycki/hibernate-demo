@@ -21,6 +21,6 @@ public class ChildModel extends BaseModel {
             @JoinColumn(name = "model_code", referencedColumnName = "code"),
             @JoinColumn(name = "model_revision", referencedColumnName = "revision")
     })
-    private Model model;
+    private ParentModel parentModel;
 
 }

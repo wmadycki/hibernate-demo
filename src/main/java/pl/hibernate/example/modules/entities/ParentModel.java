@@ -15,13 +15,13 @@ import java.util.List;
 @Setter
 @Table(name= "s_model")
 @IdClass(RevisionModelId.class)
-public class Model extends BaseModel {
+public class ParentModel extends BaseModel {
 
     public RevisionModelId getId() {
         return new RevisionModelId(code, revision);
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "model", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "parentModel", cascade = CascadeType.ALL, orphanRemoval = true)
     @Fetch(FetchMode.SELECT)
     private List<ChildModel> childModel = new ArrayList<>();
 

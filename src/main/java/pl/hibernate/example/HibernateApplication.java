@@ -1,6 +1,5 @@
 package pl.hibernate.example;
 
-import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,11 +13,6 @@ public class HibernateApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HibernateApplication.class, args);
-	}
-
-	@PostConstruct
-	public void init() {
-//		modelExecutor.createModel();
 	}
 
 }
